@@ -21,8 +21,7 @@ def call(String repoUrl) {
         }
         stage('package publisher'){
             steps{
-                //nexusPublisher nexusInstanceId: 'localnexus3', nexusRepositoryId: 'maven-releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\first-pipeline\\target\\hello-world-war-1.0.0.war']], mavenCoordinate: [artifactId: 'HelloWOrld', groupId: 'com.helloWOrld', packaging: 'war', version: '1.7']]]
-                echo 'publisher'
+                nexusArtifactUploader credentialsId: 'cc14fffd-8917-4df8-b5dc-53a1207b4819', groupId: 'com.mycompany.app', nexusUrl: 'localhost:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots', version: '1.0-SNAPSHOT'
             }
         }
        }
