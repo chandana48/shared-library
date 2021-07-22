@@ -13,7 +13,9 @@ def call(String repoUrl) {
            stage('build') {
             steps {
                 script {
-                    bat 'ant clean compile test package war'
+                    def anthome = tool name: 'jenkins-ant', type: 'ant'
+                    bat "${anthome}/bin/ant clean compile test package war"
+                    
                 }
             }
 
