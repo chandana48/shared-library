@@ -58,6 +58,7 @@ def call(String repoUrl) {
              deploy adapters: [tomcat9(credentialsId: 'd8033140-2500-4857-a267-2fede5427f84', path: '', url: 'http://localhost:8080/')], contextPath: 'examplewar', war: '**/*.war'
            }
        }
+     }
     post {
 failure {
   script {
