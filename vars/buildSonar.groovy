@@ -28,6 +28,15 @@ def call(String repoUrl) {
                   }
               }
             }
+         
+         stage("Quality Gate Status Check"){
+          timeout(time: 1, unit: 'HOURS') {
+              def qg = waitForQualityGate()
+              if (qg.status != 'OK') {
+                mail bcc: '', body: 'Sonar Quality gate failed and build cannot be proceeded', cc: '', from: '', replyTo: '', subject: 'Sonar Failed', to: 'rachhachandana48@gmail.com'
+              }
+          }
+         }
         stage ('Server'){
                         steps {
                            rtServer (
