@@ -23,7 +23,7 @@ def call(String repoUrl) {
                   script {
                     def mvnhome = tool name: 'jenkins-maven', type: 'maven'
                     withSonarQubeEnv('Soanar_server') { 
-                    sh "${mvnhome}/bin/mvn sonar:sonar"
+                    bat "${mvnhome}/bin/mvn sonar:sonar"
                   }
                   }
               }
