@@ -27,6 +27,7 @@ def call(String repoUrl) {
                   }
                   }
               }
+            }
         stage ('Server'){
                         steps {
                            rtServer (
