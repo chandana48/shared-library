@@ -1,5 +1,5 @@
-def call(Map config) {
+def call(String config) {
    
-      mail bcc: '', body: '${config.body}', cc: '', from: '', replyTo: '', subject: '${config.subject}', to: '${config.to}'
+      mail bcc: '', body: '', cc: '', from: '', replyTo: '', subject: '', to: '${config}'
    
 }
