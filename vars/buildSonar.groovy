@@ -37,7 +37,7 @@ def call(String repoUrl) {
 //                     def qg = waitForQualityGate()
 //                     if (qg.status != 'OK') {
 //                       mail bcc: '', body: 'Sonar Quality gate failed and build cannot be proceeded', cc: '', from: '', replyTo: '', subject: 'Sonar Failed', to: 'rachhachandana48@gmail.com'
-                }
+//                 }
               }
              }
            }
