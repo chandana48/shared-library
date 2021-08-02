@@ -1,6 +1,6 @@
-def call(String repoUrl, String branch){
+def call(String repoUrl){
     script{
-    git branch: "${branch}",
-      url: "${repoUrl}"
+    git url: "${repoUrl}" //branch: "${branch}",
+      
     }
 }
