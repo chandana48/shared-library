@@ -1,8 +1,8 @@
-//import org.Constants.groovy;
+import org.Constants.groovy;
 
 def call(String action){
       script {
-              def mvnhome = tool name: 'jenkins-maven', type: 'maven'
+            def mvnhome = tool ${MAVEN}
               bat "${mvnhome}/bin/mvn ${action}"
          }
 }
