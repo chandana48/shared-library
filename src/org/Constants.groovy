@@ -1,5 +1,5 @@
 package org;
 
 class Constants{
-    static final String MAVEN = "jenkins-maven";
+    static final String MAVEN = "name: 'jenkins-maven', type: 'maven'";
 }
